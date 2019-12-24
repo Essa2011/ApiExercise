@@ -1,0 +1,12 @@
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\AnythingDataAccess.dll.config
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\AnythingDataAccess.dll
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\AnythingDataAccess.pdb
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\obj\Debug\AnythingDataAccess.csprojAssemblyReference.cache
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\obj\Debug\AnythingDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\obj\Debug\AnythingDataAccess.csproj.CopyComplete
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\obj\Debug\AnythingDataAccess.dll
+C:\Users\ealmasoud\source\repos\anything\AnythingDataAccess\obj\Debug\AnythingDataAccess.pdb
