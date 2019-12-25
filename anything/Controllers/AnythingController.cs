@@ -112,41 +112,59 @@ namespace anything.Controllers
         }
 
         [HttpPost]
-        public StockItemDTO CreateStockItem(StockItemDTO NewstockItem)
+        public AddItemResponse CreateStockItem(StockItem NewstockItem)
         {
-            using (WideWorldImportersEntities entities = new WideWorldImportersEntities())
+            try
             {
-                var NewItem = new StockItemDTO()
+                using (WideWorldImportersEntities entities = new WideWorldImportersEntities())
                 {
-                    ColorID = NewstockItem.ColorID,
-                    Barcode = NewstockItem.Barcode,
-                    Brand = NewstockItem.Brand,
-                    CustomFields = NewstockItem.CustomFields,
-                    InternalComments = NewstockItem.InternalComments,
-                    IsChillerStock = NewstockItem.IsChillerStock,
-                    LastEditedBy = NewstockItem.LastEditedBy,
-                    LeadTimeDays = NewstockItem.LeadTimeDays,
-                    MarketingComments = NewstockItem.MarketingComments,
-                    OuterPackageID = NewstockItem.OuterPackageID,
-                    Photo = NewstockItem.Photo,
-                    QuantityPerOuter = NewstockItem.QuantityPerOuter,
-                    RecommendedRetailPrice = NewstockItem.RecommendedRetailPrice,
-                    SearchDetails = NewstockItem.SearchDetails,
-                    Size = NewstockItem.Size,
-                    StockItemID = NewstockItem.StockItemID,
-                    StockItemName = NewstockItem.StockItemName,
-                    SupplierID = NewstockItem.SupplierID,
-                    Tags = NewstockItem.Tags,
-                    TaxRate = NewstockItem.TaxRate,
-                    TypicalWeightPerUnit = NewstockItem.TypicalWeightPerUnit,
-                    UnitPackageID = NewstockItem.UnitPackageID,
-                    UnitPrice = NewstockItem.UnitPrice,
-                    ValidFrom = NewstockItem.ValidFrom,
-                    ValidTo = NewstockItem.ValidTo
-                };
+                    var NewItem = new StockItem()
+                    {
+                        ColorID = NewstockItem.ColorID,
+                        Barcode = NewstockItem.Barcode,
+                        Brand = NewstockItem.Brand,
+                        CustomFields = NewstockItem.CustomFields,
+                        InternalComments = NewstockItem.InternalComments,
+                        IsChillerStock = NewstockItem.IsChillerStock,
+                        LastEditedBy = NewstockItem.LastEditedBy,
+                        LeadTimeDays = NewstockItem.LeadTimeDays,
+                        MarketingComments = NewstockItem.MarketingComments,
+                        OuterPackageID = NewstockItem.OuterPackageID,
+                        Photo = NewstockItem.Photo,
+                        QuantityPerOuter = NewstockItem.QuantityPerOuter,
+                        RecommendedRetailPrice = NewstockItem.RecommendedRetailPrice,
+                        SearchDetails = NewstockItem.SearchDetails,
+                        Size = NewstockItem.Size,
+                        StockItemID = NewstockItem.StockItemID,
+                        StockItemName = NewstockItem.StockItemName,
+                        SupplierID = NewstockItem.SupplierID,
+                        Tags = NewstockItem.Tags,
+                        TaxRate = NewstockItem.TaxRate,
+                        TypicalWeightPerUnit = NewstockItem.TypicalWeightPerUnit,
+                        UnitPackageID = NewstockItem.UnitPackageID,
+                        UnitPrice = NewstockItem.UnitPrice,
+                        ValidFrom = NewstockItem.ValidFrom,
+                        ValidTo = NewstockItem.ValidTo
+                    };
 
-                return NewItem;
+                    return new AddItemResponse() {
+                        ItemId = NewstockItem.StockItemID,
+                        ErrorMessage = "",
+                        Success = true
+                    };
                 }
+
+            }
+            catch (Exception ex)
+            {
+
+                return new AddItemResponse()
+                {
+                    ItemId = NewstockItem.StockItemID,
+                    ErrorMessage = ex.ToString(),
+                    Success = false
+                };
+            }
             
             }
                 

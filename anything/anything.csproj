@@ -165,6 +165,7 @@
     <Compile Include="Controllers\AnythingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DTO\Response\AddItemResponse.cs" />
     <Compile Include="DTO\Response\AddUpdateItemResponse.cs" />
     <Compile Include="DTO\Response\StockItemDTO.cs" />
     <Compile Include="Global.asax.cs">
